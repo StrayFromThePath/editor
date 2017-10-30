@@ -1,0 +1,36 @@
+language: node_js
+dist: trusty
+
+node_js:
+  - "7"
+  - "8"
+  - "stable"
+
+sudo: false
+
+install:
+  - yarn
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  # For additional debugging when Travis inevitably gets into a bad state.
+  - npm ls --depth=0
+  - "./tools/scripts/setupTests.sh"
+
+script:
+  - yarn test:ci
+  - CI=false yarn build
+
+after_success:
+  - yarn coverage
+
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+notifications:
+  email:
+    on_failure: change
