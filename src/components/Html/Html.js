@@ -26,20 +26,6 @@ const Html = (props: Props): Element<'html'> => {
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}
-        <link
-          rel="stylesheet"
-          href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Rubik:300,700|Roboto:300,400"
-          rel="stylesheet"
-        />
         {/* $FlowIssue */}
         {styles.map(name => <link rel="stylesheet" href={`${__PUB_PATH__}${name}`} key={name} />)}
 

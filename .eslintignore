@@ -4,3 +4,4 @@ coverage
 /.git
 /public
 /flow-typed
+*code.js

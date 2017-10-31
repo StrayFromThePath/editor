@@ -7,6 +7,7 @@ import BrowserRouter from 'react-router-dom/BrowserRouter';
 import FontFaceObserver from 'fontfaceobserver';
 // internal
 // $FlowIssue
+import 'chramework/dist/main.css';
 import '../styles/main.scss';
 import configureStore from '../state/store';
 import App from '../components/App';

@@ -1,0 +1,17 @@
+.Article {
+    & {
+        position: relative;
+    }
+
+    &__content {
+        box-sizing: border-box;
+        max-width: 740px;
+        padding: 50px 20px 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__title {
+        margin-bottom: 1em;
+    }
+}

@@ -304,6 +304,7 @@ export default function createWebpackConfig(options) {
           loader: 'file-loader',
           exclude: [
             /\.html$/,
+            /\.txt$/,
             /\.(js|jsx)$/,
             /\.(ts|tsx)$/,
             /\.(re)$/,
@@ -374,6 +375,12 @@ export default function createWebpackConfig(options) {
                   options: cssLoaderOptions,
                 },
               ].filter(Boolean),
+        },
+        // loader for that lets you import files as a string.
+        {
+          test: /\.(txt|html|code.js)$/,
+          exclude: /node_modules/,
+          loader: 'raw-loader',
         },
       ].filter(Boolean),
     },

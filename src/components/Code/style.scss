@@ -1,0 +1,22 @@
+@import '../../styles/variables';
+
+.Code {
+  & pre {
+    tab-size: 4;
+    margin: 0;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    background: rgba(240, 240, 243, 0.72);
+    font-family: 'PT Mono', monospace;
+    font-size: $font-base;
+    text-shadow: none;
+  }
+
+  &_error pre {
+    background-color: #ffdbdb;
+  }
+
+  .token.operator {
+    background: none;
+  }
+}
