@@ -1,5 +1,5 @@
 // import universal from 'react-universal-component';
-// import Home from './scenes/Home';
+import Home from './scenes/Home';
 // import Loader from './components/Loader';
 // import NotFound from './components/NotFound';
 import TabsArticle from './scenes/React/Tabs';
@@ -11,6 +11,11 @@ import TabsArticle from './scenes/React/Tabs';
 // });
 
 export default [
+  {
+    path: '/',
+    exact: true,
+    component: Home,
+  },
   {
     path: '/react/tabs',
     exact: true,

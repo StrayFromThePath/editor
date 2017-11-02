@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Text from '../Text';
 import styles from './style.scss';
@@ -14,8 +14,8 @@ const Article = ({ children, title }) => (
 );
 
 Article.propTypes = {
-  children: node.isRequired,
-  title: string.isRequired,
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Article;

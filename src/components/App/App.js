@@ -14,9 +14,12 @@ const App = () => (
       <html lang="ru" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
+
       <meta name="application-name" content="Deep.Digital" />
-      <meta name="description" content="Советы по Frontend- и Backend-разработке web-сервисов, статьи и презентации от наших разработчиков, анонсы проектов и многое другое." />
+      <meta
+        name="description"
+        content="Советы по Frontend- и Backend-разработке web-сервисов, статьи и презентации от наших разработчиков, анонсы проектов и многое другое."
+      />
 
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
