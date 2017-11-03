@@ -1,0 +1,13 @@
+.CHEditor {
+  & .public-DraftStyleDefault-pre {
+    background: rgba(88, 90, 94, 0.1);
+    font-family: 'PT Mono', monospace;
+    padding: 1em;
+    border-radius: 3px;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

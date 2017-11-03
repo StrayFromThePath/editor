@@ -2472,25 +2472,55 @@ dotenv@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
-draft-js-plugins-editor@^2.0.0-beta1:
-  version "2.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/draft-js-plugins-editor/-/draft-js-plugins-editor-2.0.0-beta1.tgz#184e0c3579bffeb4b18b8b65a172ffdfce110d04"
+draft-js-block-breakout-plugin@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/draft-js-block-breakout-plugin/-/draft-js-block-breakout-plugin-2.0.1.tgz#a38e3bd68d9538d7af15d4d966844d6e6d2ad850"
+  dependencies:
+    immutable "~3.7.4"
+
+draft-js-plugins-editor@2.0.0-rc8:
+  version "2.0.0-rc8"
+  resolved "https://registry.yarnpkg.com/draft-js-plugins-editor/-/draft-js-plugins-editor-2.0.0-rc8.tgz#810f6069d432b38e07ed09504b492657150225db"
   dependencies:
     decorate-component-with-props "^1.0.2"
-    draft-js ">=0.7.0"
     find-with-regex "^1.0.2"
-    immutable ">=3.8.1"
-    react ">=15.1.0"
-    react-dom ">=15.1.0"
+    immutable "^3.7.4"
+    prop-types "^15.5.8"
     union-class-names "^1.0.0"
 
-draft-js@>=0.7.0, draft-js@^0.10.4:
+draft-js-prism-plugin@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/draft-js-prism-plugin/-/draft-js-prism-plugin-0.1.1.tgz#c8cdf3841e6e3fdfc766f2131e47a49fb972367e"
+  dependencies:
+    draft-js-prism ngs/draft-js-prism#6edb31c3805dd1de3fb897cc27fced6bac1bafbb
+    react "*"
+
+draft-js-prism@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/draft-js-prism/-/draft-js-prism-1.0.5.tgz#c32aa9c31bfd7b8ad9eb889c62e88a2cd7c741bd"
+  dependencies:
+    extend "^3.0.0"
+    immutable "*"
+
+draft-js-prism@ngs/draft-js-prism#6edb31c3805dd1de3fb897cc27fced6bac1bafbb:
+  version "1.0.3"
+  resolved "https://codeload.github.com/ngs/draft-js-prism/tar.gz/6edb31c3805dd1de3fb897cc27fced6bac1bafbb"
+  dependencies:
+    extend "^3.0.0"
+    immutable "*"
+    prismjs "^1.5.0"
+
+draft-js@^0.10.4:
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.10.4.tgz#147741642097c8120d8edc232e9503e8b7fb8d35"
   dependencies:
     fbjs "^0.8.15"
     immutable "~3.7.4"
     object-assign "^4.1.0"
+
+draftjs-utils@^0.8.8:
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/draftjs-utils/-/draftjs-utils-0.8.8.tgz#5835daed95f59d3ee1f96fdcbbb9809772c86490"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -3000,7 +3030,7 @@ express@^4.15.2, express@^4.16.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-extend@~3.0.0, extend@~3.0.1:
+extend@^3.0.0, extend@~3.0.0, extend@~3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.1.tgz#a755ea7bc1adfcc5a31ce7e762dbaadc5e636444"
 
@@ -3746,7 +3776,7 @@ ignore@^3.3.3:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.5.tgz#c4e715455f6073a8d7e5dae72d2fc9d71663dba6"
 
-immutable@>=3.8.1:
+immutable@*, immutable@^3.7.4, immutable@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
@@ -6240,7 +6270,7 @@ pretty-format@^21.2.1:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
-prismjs@^1.8.3:
+prismjs@^1.5.0, prismjs@^1.8.3:
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.8.3.tgz#4a3d140be5f2614a8987ca2330733a40d8ad207b"
   optionalDependencies:
@@ -6430,7 +6460,7 @@ react-dev-utils@^4.1.0:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@>=15.1.0, "react-dom@^15 || ^16", react-dom@^16.0.0:
+"react-dom@^15 || ^16", react-dom@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.0.0.tgz#9cc3079c3dcd70d4c6e01b84aab2a7e34c303f58"
   dependencies:
@@ -6565,7 +6595,7 @@ react-universal-component@^2.5.5:
     hoist-non-react-statics "^2.2.1"
     prop-types "^15.5.10"
 
-react@>=15.1.0, "react@^15 || ^16", react@^16.0.0:
+react@*, "react@^15 || ^16", react@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
   dependencies:

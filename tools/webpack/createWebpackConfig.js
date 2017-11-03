@@ -132,7 +132,7 @@ export default function createWebpackConfig(options) {
 
   const cssLoaderOptions = {
     modules: true,
-    localIdentName: _IS_DEV_ ? LOCAL_IDENT : '[LOCAL]',
+    localIdentName: '[LOCAL]',
     import: 2,
     minimize: _IS_DEV_ ? false : CSSNANO_OPT,
     sourceMap: _IS_DEV_,
@@ -233,7 +233,7 @@ export default function createWebpackConfig(options) {
           net: 'empty',
           tls: 'empty',
           // eslint-disable-next-line
-					child_process: 'empty'
+          child_process: 'empty',
         }
       : {
           console: false,
@@ -335,11 +335,11 @@ export default function createWebpackConfig(options) {
         // Sass
         {
           test: STYLE_FILES,
-          include: SRC_DIR,
+          // include: SRC_DIR,
           use: _IS_CLIENT_
             ? ExtractCssChunks.extract({
                 use: [
-                  cacheLoader,
+                  // cacheLoader,
                   {
                     loader: 'css-loader',
                     options: cssLoaderOptions,
@@ -349,31 +349,13 @@ export default function createWebpackConfig(options) {
                 ].filter(Boolean),
               })
             : [
-                cacheLoader,
+                // cacheLoader,
                 {
                   loader: 'css-loader/locals',
                   options: cssLoaderOptions,
                 },
                 postCSSLoaderRule,
                 sassLoaderRule,
-              ].filter(Boolean),
-        },
-        {
-          test: STYLE_FILES,
-          include: /node_modules/,
-          use: _IS_CLIENT_
-            ? ExtractCssChunks.extract({
-                use: [
-                  {
-                    loader: 'css-loader',
-                  },
-                ].filter(Boolean),
-              })
-            : [
-                {
-                  loader: 'css-loader/locals',
-                  options: cssLoaderOptions,
-                },
               ].filter(Boolean),
         },
         // loader for that lets you import files as a string.

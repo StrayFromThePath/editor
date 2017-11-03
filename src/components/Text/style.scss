@@ -17,8 +17,11 @@
     font-size: 1.77rem;
     line-height: 1.2;
   }
-
-  p {
+  & .test {
+    color: red;
+  }
+  p,
+  .paragraph {
     margin-bottom: 1em;
 
     &:last-child {
@@ -80,14 +83,6 @@
   ul:last-child,
   li:last-child {
     margin-bottom: 0;
-  }
-
-  code {
-    background: rgba(88, 90, 94, 0.1);
-    line-height: 1;
-    font-family: 'PT Mono', monospace;
-    padding: 0.1em 0.3em;
-    border-radius: 0.2em;
   }
 
   a {
